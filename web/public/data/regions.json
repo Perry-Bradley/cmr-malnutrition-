@@ -1,0 +1,72 @@
+[
+  {
+    "index": 0,
+    "region": "Adamawa",
+    "predicted_stunting_mean": 37.1,
+    "predicted_stunting_max": 37.1,
+    "n_subregions": 1
+  },
+  {
+    "index": 1,
+    "region": "Centre",
+    "predicted_stunting_mean": 20.09,
+    "predicted_stunting_max": 20.09,
+    "n_subregions": 1
+  },
+  {
+    "index": 2,
+    "region": "East",
+    "predicted_stunting_mean": 31.82,
+    "predicted_stunting_max": 31.82,
+    "n_subregions": 1
+  },
+  {
+    "index": 3,
+    "region": "Far North",
+    "predicted_stunting_mean": 38.93,
+    "predicted_stunting_max": 38.93,
+    "n_subregions": 1
+  },
+  {
+    "index": 4,
+    "region": "Littoral",
+    "predicted_stunting_mean": 17.16,
+    "predicted_stunting_max": 17.16,
+    "n_subregions": 1
+  },
+  {
+    "index": 5,
+    "region": "North",
+    "predicted_stunting_mean": 37.87,
+    "predicted_stunting_max": 37.87,
+    "n_subregions": 1
+  },
+  {
+    "index": 6,
+    "region": "Northwest",
+    "predicted_stunting_mean": 24.42,
+    "predicted_stunting_max": 24.42,
+    "n_subregions": 1
+  },
+  {
+    "index": 7,
+    "region": "South",
+    "predicted_stunting_mean": 25.62,
+    "predicted_stunting_max": 25.62,
+    "n_subregions": 1
+  },
+  {
+    "index": 8,
+    "region": "Southwest",
+    "predicted_stunting_mean": 23.28,
+    "predicted_stunting_max": 23.28,
+    "n_subregions": 1
+  },
+  {
+    "index": 9,
+    "region": "West",
+    "predicted_stunting_mean": 23.53,
+    "predicted_stunting_max": 23.53,
+    "n_subregions": 1
+  }
+]

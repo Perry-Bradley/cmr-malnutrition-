@@ -1,0 +1,42 @@
+[
+  {
+    "cluster": 0,
+    "women_secondary_plus_pct": 1.9,
+    "women_literate_pct": 43.59,
+    "improved_water_pct": 62.51,
+    "improved_sanitation_pct": 39.85,
+    "antenatal_4plus_pct": 48.37,
+    "antenatal_skilled_pct": 76.88,
+    "skilled_birth_attendance_pct": 48.98,
+    "health_facility_delivery_pct": 46.17,
+    "health_insurance_any_pct": 0.95,
+    "malaria_prevalence_pct": 28.71,
+    "child_anemia_pct": 61.35,
+    "wasting_pct": 6.88,
+    "underweight_pct": 17.42,
+    "fertility_rate": 5.51,
+    "stunting_rate": 36.99,
+    "n_subregions": 4,
+    "cluster_label": "Northern-rural (critical risk)"
+  },
+  {
+    "cluster": 1,
+    "women_secondary_plus_pct": 10.31,
+    "women_literate_pct": 87.22,
+    "improved_water_pct": 82.98,
+    "improved_sanitation_pct": 67.55,
+    "antenatal_4plus_pct": 77.92,
+    "antenatal_skilled_pct": 95.91,
+    "skilled_birth_attendance_pct": 91.07,
+    "health_facility_delivery_pct": 89.51,
+    "health_insurance_any_pct": 3.04,
+    "malaria_prevalence_pct": 19.18,
+    "child_anemia_pct": 51.48,
+    "wasting_pct": 1.55,
+    "underweight_pct": 4.14,
+    "fertility_rate": 4.33,
+    "stunting_rate": 23.6,
+    "n_subregions": 6,
+    "cluster_label": "Urban-affluent (low risk)"
+  }
+]

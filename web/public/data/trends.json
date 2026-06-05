@@ -1,0 +1,416 @@
+[
+  {
+    "region": "Adamawa",
+    "subregion": "Adamawa",
+    "slope_pp_per_year": -0.108,
+    "intercept": 256.461,
+    "r2": 0.273,
+    "last_observed": 36.55,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "12-17",
+    "slope_pp_per_year": -0.143,
+    "intercept": 317.62,
+    "r2": 0.059,
+    "last_observed": 28.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "18-23",
+    "slope_pp_per_year": -0.089,
+    "intercept": 224.195,
+    "r2": 0.038,
+    "last_observed": 45.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-35",
+    "slope_pp_per_year": -0.472,
+    "intercept": 987.984,
+    "r2": 0.661,
+    "last_observed": 32.9,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-47 months",
+    "slope_pp_per_year": -0.119,
+    "intercept": 273.025,
+    "r2": 0.133,
+    "last_observed": 29.5,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "36-47",
+    "slope_pp_per_year": -0.182,
+    "intercept": 402.665,
+    "r2": 0.456,
+    "last_observed": 32.6,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48+ months",
+    "slope_pp_per_year": -0.275,
+    "intercept": 578.025,
+    "r2": 0.815,
+    "last_observed": 22.1,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48-59",
+    "slope_pp_per_year": -0.295,
+    "intercept": 624.141,
+    "r2": 0.407,
+    "last_observed": 25.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "6-8",
+    "slope_pp_per_year": 0.213,
+    "intercept": -409.679,
+    "r2": 0.185,
+    "last_observed": 23.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "9-11",
+    "slope_pp_per_year": -0.316,
+    "intercept": 652.032,
+    "r2": 0.595,
+    "last_observed": 13.5,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "<6",
+    "slope_pp_per_year": 0.266,
+    "intercept": -519.834,
+    "r2": 0.741,
+    "last_observed": 18.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Average or larger",
+    "slope_pp_per_year": -0.126,
+    "intercept": 284.255,
+    "r2": 0.231,
+    "last_observed": 28.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Female",
+    "slope_pp_per_year": -0.157,
+    "intercept": 345.877,
+    "r2": 0.338,
+    "last_observed": 26.6,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "First birth",
+    "slope_pp_per_year": -0.298,
+    "intercept": 627.732,
+    "r2": 0.279,
+    "last_observed": 25.6,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Fourth",
+    "slope_pp_per_year": -0.307,
+    "intercept": 642.074,
+    "r2": 0.474,
+    "last_observed": 20.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Higher",
+    "slope_pp_per_year": -0.102,
+    "intercept": 212.007,
+    "r2": 0.179,
+    "last_observed": 7.6,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Highest",
+    "slope_pp_per_year": -0.307,
+    "intercept": 629.436,
+    "r2": 0.496,
+    "last_observed": 9.1,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Interviewed",
+    "slope_pp_per_year": -0.124,
+    "intercept": 281.244,
+    "r2": 0.2,
+    "last_observed": 29.3,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Less than 24 months",
+    "slope_pp_per_year": 0.239,
+    "intercept": -441.98,
+    "r2": 0.348,
+    "last_observed": 38.9,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Lowest",
+    "slope_pp_per_year": 0.1,
+    "intercept": -157.348,
+    "r2": 0.08,
+    "last_observed": 40.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Male",
+    "slope_pp_per_year": -0.095,
+    "intercept": 225.831,
+    "r2": 0.082,
+    "last_observed": 31.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Middle",
+    "slope_pp_per_year": -0.533,
+    "intercept": 1104.388,
+    "r2": 0.869,
+    "last_observed": 27.8,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education",
+    "slope_pp_per_year": -0.078,
+    "intercept": 200.566,
+    "r2": 0.084,
+    "last_observed": 39.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education or primary",
+    "slope_pp_per_year": -0.013,
+    "intercept": 62.687,
+    "r2": 0.004,
+    "last_observed": 35.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Normal (BMI 18.5-24.9)",
+    "slope_pp_per_year": -0.222,
+    "intercept": 482.463,
+    "r2": 0.932,
+    "last_observed": 34.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed and not in household",
+    "slope_pp_per_year": -0.679,
+    "intercept": 1398.44,
+    "r2": 0.726,
+    "last_observed": 27.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed but in household",
+    "slope_pp_per_year": -0.357,
+    "intercept": 743.648,
+    "r2": 0.26,
+    "last_observed": 20.5,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Overweight/ obese (BMI >= 25.0)",
+    "slope_pp_per_year": -0.492,
+    "intercept": 1010.425,
+    "r2": 0.887,
+    "last_observed": 18.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Primary",
+    "slope_pp_per_year": 0.052,
+    "intercept": -71.661,
+    "r2": 0.063,
+    "last_observed": 32.4,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Rural",
+    "slope_pp_per_year": -0.008,
+    "intercept": 55.658,
+    "r2": 0.002,
+    "last_observed": 36.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Second",
+    "slope_pp_per_year": 0.005,
+    "intercept": 29.686,
+    "r2": 0.001,
+    "last_observed": 38.7,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary",
+    "slope_pp_per_year": -0.016,
+    "intercept": 54.531,
+    "r2": 0.002,
+    "last_observed": 21.8,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary or higher",
+    "slope_pp_per_year": -0.078,
+    "intercept": 179.216,
+    "r2": 0.036,
+    "last_observed": 20.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Small",
+    "slope_pp_per_year": -0.203,
+    "intercept": 445.105,
+    "r2": 0.308,
+    "last_observed": 35.0,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Thin (BMI < 18.5)",
+    "slope_pp_per_year": 0.005,
+    "intercept": 33.175,
+    "r2": 0.0,
+    "last_observed": 41.8,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Urban",
+    "slope_pp_per_year": -0.183,
+    "intercept": 391.285,
+    "r2": 0.291,
+    "last_observed": 19.8,
+    "last_year": 2018
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Very small",
+    "slope_pp_per_year": -0.678,
+    "intercept": 1402.223,
+    "r2": 0.697,
+    "last_observed": 28.2,
+    "last_year": 2018
+  },
+  {
+    "region": "Centre",
+    "subregion": "Centre",
+    "slope_pp_per_year": -0.229,
+    "intercept": 481.808,
+    "r2": 0.354,
+    "last_observed": 19.5,
+    "last_year": 2018
+  },
+  {
+    "region": "East",
+    "subregion": "East",
+    "slope_pp_per_year": 0.025,
+    "intercept": -16.252,
+    "r2": 0.011,
+    "last_observed": 33.6,
+    "last_year": 2018
+  },
+  {
+    "region": "Far North",
+    "subregion": "Far North",
+    "slope_pp_per_year": -0.031,
+    "intercept": 103.295,
+    "r2": 0.021,
+    "last_observed": 37.9,
+    "last_year": 2018
+  },
+  {
+    "region": "Littoral",
+    "subregion": "Littoral",
+    "slope_pp_per_year": -0.292,
+    "intercept": 606.84,
+    "r2": 0.444,
+    "last_observed": 15.4,
+    "last_year": 2018
+  },
+  {
+    "region": "North",
+    "subregion": "North",
+    "slope_pp_per_year": -0.01,
+    "intercept": 61.681,
+    "r2": 0.002,
+    "last_observed": 39.9,
+    "last_year": 2018
+  },
+  {
+    "region": "Northwest",
+    "subregion": "Northwest",
+    "slope_pp_per_year": -0.16,
+    "intercept": 353.551,
+    "r2": 0.263,
+    "last_observed": 27.0,
+    "last_year": 2018
+  },
+  {
+    "region": "South",
+    "subregion": "South",
+    "slope_pp_per_year": -0.174,
+    "intercept": 381.16,
+    "r2": 0.261,
+    "last_observed": 27.95,
+    "last_year": 2018
+  },
+  {
+    "region": "Southwest",
+    "subregion": "Southwest",
+    "slope_pp_per_year": -0.209,
+    "intercept": 450.871,
+    "r2": 0.392,
+    "last_observed": 27.5,
+    "last_year": 2018
+  },
+  {
+    "region": "West",
+    "subregion": "West",
+    "slope_pp_per_year": -0.181,
+    "intercept": 392.705,
+    "r2": 0.159,
+    "last_observed": 24.25,
+    "last_year": 2018
+  }
+]

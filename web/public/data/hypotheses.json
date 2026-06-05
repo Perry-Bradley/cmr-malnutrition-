@@ -1,0 +1,80 @@
+[
+  {
+    "rho": -0.2836615635,
+    "p_value": 0.0459044651,
+    "n": 50.0,
+    "hypothesis": "H1",
+    "feature": "women_secondary_plus_pct",
+    "expected_sign": "-",
+    "reject_null": true,
+    "ml_rmse_mean": null,
+    "baseline_rmse_mean": null,
+    "improvement_pct": null,
+    "t_stat": null
+  },
+  {
+    "rho": -0.5008888675,
+    "p_value": 0.0002115614,
+    "n": 50.0,
+    "hypothesis": "H2",
+    "feature": "wash_composite",
+    "expected_sign": "-",
+    "reject_null": true,
+    "ml_rmse_mean": null,
+    "baseline_rmse_mean": null,
+    "improvement_pct": null,
+    "t_stat": null
+  },
+  {
+    "rho": -0.3892127878,
+    "p_value": 0.005212055,
+    "n": 50.0,
+    "hypothesis": "H3",
+    "feature": "ses_proxy",
+    "expected_sign": "-",
+    "reject_null": true,
+    "ml_rmse_mean": null,
+    "baseline_rmse_mean": null,
+    "improvement_pct": null,
+    "t_stat": null
+  },
+  {
+    "rho": -0.7743717869,
+    "p_value": 0.0,
+    "n": 50.0,
+    "hypothesis": "H4",
+    "feature": "health_facility_delivery_pct",
+    "expected_sign": "-",
+    "reject_null": true,
+    "ml_rmse_mean": null,
+    "baseline_rmse_mean": null,
+    "improvement_pct": null,
+    "t_stat": null
+  },
+  {
+    "rho": 0.1748235243,
+    "p_value": 0.2246331504,
+    "n": 50.0,
+    "hypothesis": "H5",
+    "feature": "malaria_prevalence_pct",
+    "expected_sign": "+",
+    "reject_null": false,
+    "ml_rmse_mean": null,
+    "baseline_rmse_mean": null,
+    "improvement_pct": null,
+    "t_stat": null
+  },
+  {
+    "rho": null,
+    "p_value": 9.20572e-05,
+    "n": null,
+    "hypothesis": "H6",
+    "feature": null,
+    "expected_sign": null,
+    "reject_null": true,
+    "ml_rmse_mean": 5.0825256729,
+    "baseline_rmse_mean": 9.6277962135,
+    "improvement_pct": 47.2098748227,
+    "t_stat": -13.3114221253
+  }
+]

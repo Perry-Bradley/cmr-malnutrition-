@@ -1,0 +1,82 @@
+[
+  {
+    "region": "Adamawa",
+    "subregion": "Adamawa",
+    "year": 2018,
+    "cluster": 0,
+    "cluster_label": "Northern-rural (critical risk)",
+    "stunting_rate": 36.55
+  },
+  {
+    "region": "Centre",
+    "subregion": "Centre",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 19.5
+  },
+  {
+    "region": "East",
+    "subregion": "East",
+    "year": 2018,
+    "cluster": 0,
+    "cluster_label": "Northern-rural (critical risk)",
+    "stunting_rate": 33.6
+  },
+  {
+    "region": "Far North",
+    "subregion": "Far North",
+    "year": 2018,
+    "cluster": 0,
+    "cluster_label": "Northern-rural (critical risk)",
+    "stunting_rate": 37.9
+  },
+  {
+    "region": "Littoral",
+    "subregion": "Littoral",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 15.4
+  },
+  {
+    "region": "North",
+    "subregion": "North",
+    "year": 2018,
+    "cluster": 0,
+    "cluster_label": "Northern-rural (critical risk)",
+    "stunting_rate": 39.9
+  },
+  {
+    "region": "Northwest",
+    "subregion": "Northwest",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 27.0
+  },
+  {
+    "region": "South",
+    "subregion": "South",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 27.95
+  },
+  {
+    "region": "Southwest",
+    "subregion": "Southwest",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 27.5
+  },
+  {
+    "region": "West",
+    "subregion": "West",
+    "year": 2018,
+    "cluster": 1,
+    "cluster_label": "Urban-affluent (low risk)",
+    "stunting_rate": 24.25
+  }
+]

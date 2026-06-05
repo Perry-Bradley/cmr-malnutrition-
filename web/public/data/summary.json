@@ -1,0 +1,21 @@
+{
+  "n_regions": 11,
+  "n_subregions": 46,
+  "survey_years": [
+    1991,
+    1998,
+    2004,
+    2011,
+    2018
+  ],
+  "latest_year": 2018,
+  "national_mean_stunting": 28.1,
+  "worst_subregion_pct": 45.4,
+  "best_subregion_pct": 7.6,
+  "best_model": "Random Forest",
+  "best_cv_rmse": 5.083,
+  "baseline_cv_rmse": 9.628,
+  "improvement_pct": 47.2,
+  "n_hypotheses_supported": 5,
+  "n_hypotheses_total": 6
+}

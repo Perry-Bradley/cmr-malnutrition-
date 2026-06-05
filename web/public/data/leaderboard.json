@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Random Forest",
+    "rmse": 5.081,
+    "mae": 3.51,
+    "r2": 0.738,
+    "cv_rmse_mean": 5.083,
+    "cv_rmse_std": 0.284
+  },
+  {
+    "name": "XGBoost",
+    "rmse": 4.703,
+    "mae": 3.28,
+    "r2": 0.775,
+    "cv_rmse_mean": 5.134,
+    "cv_rmse_std": 0.496
+  },
+  {
+    "name": "Lasso",
+    "rmse": 5.758,
+    "mae": 3.905,
+    "r2": 0.663,
+    "cv_rmse_mean": 5.136,
+    "cv_rmse_std": 0.622
+  },
+  {
+    "name": "Ridge",
+    "rmse": 6.108,
+    "mae": 4.017,
+    "r2": 0.621,
+    "cv_rmse_mean": 5.166,
+    "cv_rmse_std": 0.734
+  },
+  {
+    "name": "Linear Regression",
+    "rmse": 6.094,
+    "mae": 4.06,
+    "r2": 0.623,
+    "cv_rmse_mean": 5.19,
+    "cv_rmse_std": 0.672
+  },
+  {
+    "name": "Gradient Boosting",
+    "rmse": 5.69,
+    "mae": 3.69,
+    "r2": 0.671,
+    "cv_rmse_mean": 5.359,
+    "cv_rmse_std": 0.36
+  },
+  {
+    "name": "LightGBM",
+    "rmse": 5.255,
+    "mae": 3.721,
+    "r2": 0.719,
+    "cv_rmse_mean": 5.694,
+    "cv_rmse_std": 0.425
+  },
+  {
+    "name": "Decision Tree",
+    "rmse": 6.43,
+    "mae": 4.139,
+    "r2": 0.58,
+    "cv_rmse_mean": 6.011,
+    "cv_rmse_std": 0.495
+  },
+  {
+    "name": "K-Nearest Neighbours",
+    "rmse": 6.865,
+    "mae": 4.773,
+    "r2": 0.521,
+    "cv_rmse_mean": 6.645,
+    "cv_rmse_std": 0.607
+  },
+  {
+    "name": "Baseline (mean)",
+    "rmse": 9.921,
+    "mae": 7.779,
+    "r2": 0.0,
+    "cv_rmse_mean": 9.628,
+    "cv_rmse_std": 0.866
+  }
+]

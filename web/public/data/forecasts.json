@@ -1,0 +1,738 @@
+[
+  {
+    "region": "Adamawa",
+    "subregion": "Adamawa",
+    "year": 2026,
+    "forecast_stunting": 37.354,
+    "slope_pp_per_year": -0.108,
+    "trend_r2": 0.273
+  },
+  {
+    "region": "Adamawa",
+    "subregion": "Adamawa",
+    "year": 2028,
+    "forecast_stunting": 37.138,
+    "slope_pp_per_year": -0.108,
+    "trend_r2": 0.273
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "12-17",
+    "year": 2026,
+    "forecast_stunting": 27.972,
+    "slope_pp_per_year": -0.143,
+    "trend_r2": 0.059
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "12-17",
+    "year": 2028,
+    "forecast_stunting": 27.686,
+    "slope_pp_per_year": -0.143,
+    "trend_r2": 0.059
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "18-23",
+    "year": 2026,
+    "forecast_stunting": 44.868,
+    "slope_pp_per_year": -0.089,
+    "trend_r2": 0.038
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "18-23",
+    "year": 2028,
+    "forecast_stunting": 44.691,
+    "slope_pp_per_year": -0.089,
+    "trend_r2": 0.038
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-35",
+    "year": 2026,
+    "forecast_stunting": 32.715,
+    "slope_pp_per_year": -0.472,
+    "trend_r2": 0.661
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-35",
+    "year": 2028,
+    "forecast_stunting": 31.772,
+    "slope_pp_per_year": -0.472,
+    "trend_r2": 0.661
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-47 months",
+    "year": 2026,
+    "forecast_stunting": 31.727,
+    "slope_pp_per_year": -0.119,
+    "trend_r2": 0.133
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "24-47 months",
+    "year": 2028,
+    "forecast_stunting": 31.489,
+    "slope_pp_per_year": -0.119,
+    "trend_r2": 0.133
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "36-47",
+    "year": 2026,
+    "forecast_stunting": 33.607,
+    "slope_pp_per_year": -0.182,
+    "trend_r2": 0.456
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "36-47",
+    "year": 2028,
+    "forecast_stunting": 33.242,
+    "slope_pp_per_year": -0.182,
+    "trend_r2": 0.456
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48+ months",
+    "year": 2026,
+    "forecast_stunting": 20.92,
+    "slope_pp_per_year": -0.275,
+    "trend_r2": 0.815
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48+ months",
+    "year": 2028,
+    "forecast_stunting": 20.371,
+    "slope_pp_per_year": -0.275,
+    "trend_r2": 0.815
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48-59",
+    "year": 2026,
+    "forecast_stunting": 27.031,
+    "slope_pp_per_year": -0.295,
+    "trend_r2": 0.407
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "48-59",
+    "year": 2028,
+    "forecast_stunting": 26.441,
+    "slope_pp_per_year": -0.295,
+    "trend_r2": 0.407
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "6-8",
+    "year": 2026,
+    "forecast_stunting": 21.861,
+    "slope_pp_per_year": 0.213,
+    "trend_r2": 0.185
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "6-8",
+    "year": 2028,
+    "forecast_stunting": 22.287,
+    "slope_pp_per_year": 0.213,
+    "trend_r2": 0.185
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "9-11",
+    "year": 2026,
+    "forecast_stunting": 12.3,
+    "slope_pp_per_year": -0.316,
+    "trend_r2": 0.595
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "9-11",
+    "year": 2028,
+    "forecast_stunting": 11.668,
+    "slope_pp_per_year": -0.316,
+    "trend_r2": 0.595
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "<6",
+    "year": 2026,
+    "forecast_stunting": 18.419,
+    "slope_pp_per_year": 0.266,
+    "trend_r2": 0.741
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "<6",
+    "year": 2028,
+    "forecast_stunting": 18.95,
+    "slope_pp_per_year": 0.266,
+    "trend_r2": 0.741
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Average or larger",
+    "year": 2026,
+    "forecast_stunting": 28.615,
+    "slope_pp_per_year": -0.126,
+    "trend_r2": 0.231
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Average or larger",
+    "year": 2028,
+    "forecast_stunting": 28.362,
+    "slope_pp_per_year": -0.126,
+    "trend_r2": 0.231
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Female",
+    "year": 2026,
+    "forecast_stunting": 27.364,
+    "slope_pp_per_year": -0.157,
+    "trend_r2": 0.338
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Female",
+    "year": 2028,
+    "forecast_stunting": 27.05,
+    "slope_pp_per_year": -0.157,
+    "trend_r2": 0.338
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "First birth",
+    "year": 2026,
+    "forecast_stunting": 23.72,
+    "slope_pp_per_year": -0.298,
+    "trend_r2": 0.279
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "First birth",
+    "year": 2028,
+    "forecast_stunting": 23.124,
+    "slope_pp_per_year": -0.298,
+    "trend_r2": 0.279
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Fourth",
+    "year": 2026,
+    "forecast_stunting": 19.3,
+    "slope_pp_per_year": -0.307,
+    "trend_r2": 0.474
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Fourth",
+    "year": 2028,
+    "forecast_stunting": 18.686,
+    "slope_pp_per_year": -0.307,
+    "trend_r2": 0.474
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Higher",
+    "year": 2026,
+    "forecast_stunting": 5.335,
+    "slope_pp_per_year": -0.102,
+    "trend_r2": 0.179
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Higher",
+    "year": 2028,
+    "forecast_stunting": 5.131,
+    "slope_pp_per_year": -0.102,
+    "trend_r2": 0.179
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Highest",
+    "year": 2026,
+    "forecast_stunting": 8.015,
+    "slope_pp_per_year": -0.307,
+    "trend_r2": 0.496
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Highest",
+    "year": 2028,
+    "forecast_stunting": 7.401,
+    "slope_pp_per_year": -0.307,
+    "trend_r2": 0.496
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Interviewed",
+    "year": 2026,
+    "forecast_stunting": 30.204,
+    "slope_pp_per_year": -0.124,
+    "trend_r2": 0.2
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Interviewed",
+    "year": 2028,
+    "forecast_stunting": 29.956,
+    "slope_pp_per_year": -0.124,
+    "trend_r2": 0.2
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Less than 24 months",
+    "year": 2026,
+    "forecast_stunting": 43.051,
+    "slope_pp_per_year": 0.239,
+    "trend_r2": 0.348
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Less than 24 months",
+    "year": 2028,
+    "forecast_stunting": 43.53,
+    "slope_pp_per_year": 0.239,
+    "trend_r2": 0.348
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Lowest",
+    "year": 2026,
+    "forecast_stunting": 45.523,
+    "slope_pp_per_year": 0.1,
+    "trend_r2": 0.08
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Lowest",
+    "year": 2028,
+    "forecast_stunting": 45.723,
+    "slope_pp_per_year": 0.1,
+    "trend_r2": 0.08
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Male",
+    "year": 2026,
+    "forecast_stunting": 32.883,
+    "slope_pp_per_year": -0.095,
+    "trend_r2": 0.082
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Male",
+    "year": 2028,
+    "forecast_stunting": 32.692,
+    "slope_pp_per_year": -0.095,
+    "trend_r2": 0.082
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Middle",
+    "year": 2026,
+    "forecast_stunting": 24.365,
+    "slope_pp_per_year": -0.533,
+    "trend_r2": 0.869
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Middle",
+    "year": 2028,
+    "forecast_stunting": 23.299,
+    "slope_pp_per_year": -0.533,
+    "trend_r2": 0.869
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education",
+    "year": 2026,
+    "forecast_stunting": 41.625,
+    "slope_pp_per_year": -0.078,
+    "trend_r2": 0.084
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education",
+    "year": 2028,
+    "forecast_stunting": 41.469,
+    "slope_pp_per_year": -0.078,
+    "trend_r2": 0.084
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education or primary",
+    "year": 2026,
+    "forecast_stunting": 37.249,
+    "slope_pp_per_year": -0.013,
+    "trend_r2": 0.004
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "No education or primary",
+    "year": 2028,
+    "forecast_stunting": 37.224,
+    "slope_pp_per_year": -0.013,
+    "trend_r2": 0.004
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Normal (BMI 18.5-24.9)",
+    "year": 2026,
+    "forecast_stunting": 31.74,
+    "slope_pp_per_year": -0.222,
+    "trend_r2": 0.932
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Normal (BMI 18.5-24.9)",
+    "year": 2028,
+    "forecast_stunting": 31.295,
+    "slope_pp_per_year": -0.222,
+    "trend_r2": 0.932
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed and not in household",
+    "year": 2026,
+    "forecast_stunting": 23.655,
+    "slope_pp_per_year": -0.679,
+    "trend_r2": 0.726
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed and not in household",
+    "year": 2028,
+    "forecast_stunting": 22.298,
+    "slope_pp_per_year": -0.679,
+    "trend_r2": 0.726
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed but in household",
+    "year": 2026,
+    "forecast_stunting": 20.076,
+    "slope_pp_per_year": -0.357,
+    "trend_r2": 0.26
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Not interviewed but in household",
+    "year": 2028,
+    "forecast_stunting": 19.362,
+    "slope_pp_per_year": -0.357,
+    "trend_r2": 0.26
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Overweight/ obese (BMI >= 25.0)",
+    "year": 2026,
+    "forecast_stunting": 14.327,
+    "slope_pp_per_year": -0.492,
+    "trend_r2": 0.887
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Overweight/ obese (BMI >= 25.0)",
+    "year": 2028,
+    "forecast_stunting": 13.344,
+    "slope_pp_per_year": -0.492,
+    "trend_r2": 0.887
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Primary",
+    "year": 2026,
+    "forecast_stunting": 34.33,
+    "slope_pp_per_year": 0.052,
+    "trend_r2": 0.063
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Primary",
+    "year": 2028,
+    "forecast_stunting": 34.435,
+    "slope_pp_per_year": 0.052,
+    "trend_r2": 0.063
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Rural",
+    "year": 2026,
+    "forecast_stunting": 38.699,
+    "slope_pp_per_year": -0.008,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Rural",
+    "year": 2028,
+    "forecast_stunting": 38.682,
+    "slope_pp_per_year": -0.008,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Second",
+    "year": 2026,
+    "forecast_stunting": 39.97,
+    "slope_pp_per_year": 0.005,
+    "trend_r2": 0.001
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Second",
+    "year": 2028,
+    "forecast_stunting": 39.98,
+    "slope_pp_per_year": 0.005,
+    "trend_r2": 0.001
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary",
+    "year": 2026,
+    "forecast_stunting": 22.418,
+    "slope_pp_per_year": -0.016,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary",
+    "year": 2028,
+    "forecast_stunting": 22.386,
+    "slope_pp_per_year": -0.016,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary or higher",
+    "year": 2026,
+    "forecast_stunting": 20.185,
+    "slope_pp_per_year": -0.078,
+    "trend_r2": 0.036
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Secondary or higher",
+    "year": 2028,
+    "forecast_stunting": 20.028,
+    "slope_pp_per_year": -0.078,
+    "trend_r2": 0.036
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Small",
+    "year": 2026,
+    "forecast_stunting": 34.583,
+    "slope_pp_per_year": -0.203,
+    "trend_r2": 0.308
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Small",
+    "year": 2028,
+    "forecast_stunting": 34.178,
+    "slope_pp_per_year": -0.203,
+    "trend_r2": 0.308
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Thin (BMI < 18.5)",
+    "year": 2026,
+    "forecast_stunting": 43.316,
+    "slope_pp_per_year": 0.005,
+    "trend_r2": 0.0
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Thin (BMI < 18.5)",
+    "year": 2028,
+    "forecast_stunting": 43.326,
+    "slope_pp_per_year": 0.005,
+    "trend_r2": 0.0
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Urban",
+    "year": 2026,
+    "forecast_stunting": 20.002,
+    "slope_pp_per_year": -0.183,
+    "trend_r2": 0.291
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Urban",
+    "year": 2028,
+    "forecast_stunting": 19.635,
+    "slope_pp_per_year": -0.183,
+    "trend_r2": 0.291
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Very small",
+    "year": 2026,
+    "forecast_stunting": 28.494,
+    "slope_pp_per_year": -0.678,
+    "trend_r2": 0.697
+  },
+  {
+    "region": "Cameroon",
+    "subregion": "Very small",
+    "year": 2028,
+    "forecast_stunting": 27.138,
+    "slope_pp_per_year": -0.678,
+    "trend_r2": 0.697
+  },
+  {
+    "region": "Centre",
+    "subregion": "Centre",
+    "year": 2026,
+    "forecast_stunting": 17.975,
+    "slope_pp_per_year": -0.229,
+    "trend_r2": 0.354
+  },
+  {
+    "region": "Centre",
+    "subregion": "Centre",
+    "year": 2028,
+    "forecast_stunting": 17.517,
+    "slope_pp_per_year": -0.229,
+    "trend_r2": 0.354
+  },
+  {
+    "region": "East",
+    "subregion": "East",
+    "year": 2026,
+    "forecast_stunting": 34.218,
+    "slope_pp_per_year": 0.025,
+    "trend_r2": 0.011
+  },
+  {
+    "region": "East",
+    "subregion": "East",
+    "year": 2028,
+    "forecast_stunting": 34.268,
+    "slope_pp_per_year": 0.025,
+    "trend_r2": 0.011
+  },
+  {
+    "region": "Far North",
+    "subregion": "Far North",
+    "year": 2026,
+    "forecast_stunting": 40.106,
+    "slope_pp_per_year": -0.031,
+    "trend_r2": 0.021
+  },
+  {
+    "region": "Far North",
+    "subregion": "Far North",
+    "year": 2028,
+    "forecast_stunting": 40.044,
+    "slope_pp_per_year": -0.031,
+    "trend_r2": 0.021
+  },
+  {
+    "region": "Littoral",
+    "subregion": "Littoral",
+    "year": 2026,
+    "forecast_stunting": 15.773,
+    "slope_pp_per_year": -0.292,
+    "trend_r2": 0.444
+  },
+  {
+    "region": "Littoral",
+    "subregion": "Littoral",
+    "year": 2028,
+    "forecast_stunting": 15.19,
+    "slope_pp_per_year": -0.292,
+    "trend_r2": 0.444
+  },
+  {
+    "region": "North",
+    "subregion": "North",
+    "year": 2026,
+    "forecast_stunting": 41.566,
+    "slope_pp_per_year": -0.01,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "North",
+    "subregion": "North",
+    "year": 2028,
+    "forecast_stunting": 41.546,
+    "slope_pp_per_year": -0.01,
+    "trend_r2": 0.002
+  },
+  {
+    "region": "Northwest",
+    "subregion": "Northwest",
+    "year": 2026,
+    "forecast_stunting": 28.949,
+    "slope_pp_per_year": -0.16,
+    "trend_r2": 0.263
+  },
+  {
+    "region": "Northwest",
+    "subregion": "Northwest",
+    "year": 2028,
+    "forecast_stunting": 28.629,
+    "slope_pp_per_year": -0.16,
+    "trend_r2": 0.263
+  },
+  {
+    "region": "South",
+    "subregion": "South",
+    "year": 2026,
+    "forecast_stunting": 27.783,
+    "slope_pp_per_year": -0.174,
+    "trend_r2": 0.261
+  },
+  {
+    "region": "South",
+    "subregion": "South",
+    "year": 2028,
+    "forecast_stunting": 27.434,
+    "slope_pp_per_year": -0.174,
+    "trend_r2": 0.261
+  },
+  {
+    "region": "Southwest",
+    "subregion": "Southwest",
+    "year": 2026,
+    "forecast_stunting": 27.314,
+    "slope_pp_per_year": -0.209,
+    "trend_r2": 0.392
+  },
+  {
+    "region": "Southwest",
+    "subregion": "Southwest",
+    "year": 2028,
+    "forecast_stunting": 26.896,
+    "slope_pp_per_year": -0.209,
+    "trend_r2": 0.392
+  },
+  {
+    "region": "West",
+    "subregion": "West",
+    "year": 2026,
+    "forecast_stunting": 26.789,
+    "slope_pp_per_year": -0.181,
+    "trend_r2": 0.159
+  },
+  {
+    "region": "West",
+    "subregion": "West",
+    "year": 2028,
+    "forecast_stunting": 26.428,
+    "slope_pp_per_year": -0.181,
+    "trend_r2": 0.159
+  }
+]

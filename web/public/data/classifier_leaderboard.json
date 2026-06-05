@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Logistic Regression",
+    "accuracy": 0.727,
+    "macro_f1": 0.61,
+    "cv_accuracy_mean": 0.668,
+    "cv_accuracy_std": 0.074
+  },
+  {
+    "name": "Random Forest",
+    "accuracy": 0.636,
+    "macro_f1": 0.539,
+    "cv_accuracy_mean": 0.655,
+    "cv_accuracy_std": 0.068
+  }
+]
