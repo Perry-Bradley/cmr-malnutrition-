@@ -1,0 +1,28 @@
+# Core
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.18
+
+# Machine learning
+scikit-learn>=1.4
+xgboost>=2.0
+lightgbm>=4.1
+shap>=0.44
+
+# Geospatial
+geopandas>=0.14
+shapely>=2.0
+
+# Data fetching
+requests>=2.31
+
+# Notebook
+jupyter>=1.0
+notebook>=7.0
+ipykernel>=6.27

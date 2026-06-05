@@ -1,0 +1,7 @@
+rho,p_value,n,hypothesis,feature,expected_sign,reject_null,ml_rmse_mean,baseline_rmse_mean,improvement_pct,t_stat
+-0.2836615634992277,0.0459044651332976,50.0,H1,women_secondary_plus_pct,-,True,,,,
+-0.5008888675347138,0.00021156137543674707,50.0,H2,wash_composite,-,True,,,,
+-0.3892127877953493,0.00521205504192956,50.0,H3,ses_proxy,-,True,,,,
+-0.7743717868639793,4.1975523786608386e-11,50.0,H4,health_facility_delivery_pct,-,True,,,,
+0.17482352430774992,0.22463315044720944,50.0,H5,malaria_prevalence_pct,+,False,,,,
+,9.84988319901456e-06,,H6,,,True,3.641209168787193,12.715295764828378,71.36355114240364,-23.421117155187712
