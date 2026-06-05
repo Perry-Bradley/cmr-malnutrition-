@@ -3,67 +3,63 @@ import {
   ArrowRight, LineChart, MapPinned, ScatterChart, TrendingUp,
   Database, Activity, Award,
 } from "lucide-react";
-import ChoroplethMap from "@/components/ChoroplethMap";
 import { Card } from "@/components/Card";
 import { KpiTile } from "@/components/KpiTile";
 import { DataTable } from "@/components/DataTable";
 import { RiskBandBadge } from "@/components/Badge";
 import { HypothesisStrip } from "@/components/HypothesisStrip";
 import { DataBanner } from "@/components/DataBanner";
-import {
-  getHotspots, getHypotheses, getRegionAgg, getSummary,
-} from "@/lib/data";
+import { getHotspots, getHypotheses, getSummary } from "@/lib/data";
 import { num, pct } from "@/lib/format";
 
 export default async function HomePage() {
-  const [summary, regions, hotspots, hypotheses] = await Promise.all([
-    getSummary(), getRegionAgg(), getHotspots(), getHypotheses(),
+  const [summary, hotspots, hypotheses] = await Promise.all([
+    getSummary(), getHotspots(), getHypotheses(),
   ]);
 
-  const regionValues: Record<string, number> = Object.fromEntries(
-    regions.map((r) => [r.region, r.predicted_stunting_mean])
-  );
   const top10 = hotspots.slice(0, 10);
 
   return (
     <div className="flex flex-col gap-10">
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-3xl border border-zinc-200/80 hero-bg p-8 sm:p-10">
+      <section className="relative overflow-hidden rounded-3xl border border-zinc-200/80 hero-bg p-8 sm:p-12">
         <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" />
         <div className="absolute -bottom-32 -left-16 h-80 w-80 rounded-full bg-amber-200/40 blur-3xl" />
-        <div className="relative grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-white/80 px-3 py-1 text-xs font-medium text-red-700 shadow-sm backdrop-blur">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-red-600 animate-pulse" />
-              CEC 420 · Data Mining · University of Buea
-            </div>
-            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 leading-[1.05]">
-              Where are Cameroon&apos;s child-malnutrition{" "}
-              <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
-                hotspots
-              </span>?
-            </h1>
-            <p className="mt-4 max-w-xl text-base text-zinc-700 leading-relaxed">
-              {pct(summary.national_mean_stunting, 0)} of children under five were
-              stunted at the {summary.latest_year} DHS round, with the burden
-              concentrated in the north. This atlas applies four data-mining
-              techniques — regression, classification, clustering and forecasting —
-              to {summary.n_subregions} real DHS sub-populations across {" "}
-              {summary.survey_years[0]}–{summary.latest_year}.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/hotspots"
-                className="group inline-flex items-center gap-2 rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-md shadow-red-600/20 transition-all hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30"
-              >
-                <MapPinned className="h-4 w-4" />
-                See the hotspot ranking
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </div>
+        <div className="relative max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-white/80 px-3 py-1 text-xs font-medium text-red-700 shadow-sm backdrop-blur">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-red-600 animate-pulse" />
+            CEC 420 · Data Mining · University of Buea
           </div>
-          <div className="relative rounded-2xl bg-white/85 p-3 ring-1 ring-zinc-200 shadow-xl backdrop-blur">
-            <ChoroplethMap values={regionValues} height={380} />
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 leading-[1.05]">
+            Where are Cameroon&apos;s child-malnutrition{" "}
+            <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+              hotspots
+            </span>?
+          </h1>
+          <p className="mt-4 text-base sm:text-lg text-zinc-700 leading-relaxed">
+            {pct(summary.national_mean_stunting, 0)} of children under five were
+            stunted at the {summary.latest_year} DHS round, with the burden
+            concentrated in the northern regions. This atlas applies four data-mining
+            techniques — regression, classification, clustering and forecasting —
+            to {summary.n_subregions} real DHS sub-populations across {" "}
+            {summary.survey_years[0]}–{summary.latest_year}.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/hotspots"
+              className="group inline-flex items-center gap-2 rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-md shadow-red-600/20 transition-all hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30"
+            >
+              <MapPinned className="h-4 w-4" />
+              See Hotspot Rankings
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+            <Link
+              href="/predict"
+              className="group inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 shadow-sm transition-all hover:bg-zinc-50"
+            >
+              <Activity className="h-4 w-4" />
+              Try What-If Predictor
+            </Link>
           </div>
         </div>
       </section>
@@ -159,6 +155,7 @@ export default async function HomePage() {
             { icon: MapPinned,    href: "/classification", title: "Classification", body: "WHO 4-band risk classifier.", tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
             { icon: LineChart,    href: "/clustering",     title: "Clustering",     body: "K-Means on driver profiles.", tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
             { icon: TrendingUp,   href: "/forecasts",      title: "Forecasts",      body: "Trends to 2026 / 2028.",      tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
+            { icon: Activity,     href: "/predict",        title: "Predictor",      body: "What-If simulations in browser.", tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
           ].map(({ icon: Icon, href, title, body, tone }) => (
             <Link
               key={href}

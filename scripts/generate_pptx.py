@@ -11,7 +11,7 @@ from pptx.enum.text import PP_ALIGN
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIGURES = os.path.join(BASE, "reports", "figures")
-OUT = os.path.join(BASE, "reports", "CEC420_Malnutrition_Atlas_Presentation.pptx")
+OUT = os.path.join(BASE, "reports", "CEC420_Malnutrition_Atlas_Presentation_v2.pptx")
 
 # ── colour palette ─────────────────────────────────────────────────────────────
 NAVY   = RGBColor(0, 51, 102)
@@ -699,20 +699,18 @@ sl = prs.slides.add_slide(BLANK)
 slide_header(sl, "Deployment", "Client-Side Web Application + Offline Artefacts")
 footer(sl, 19)
 
-add_text(sl, "Web Application — 10 Interactive Pages", 0.35, 1.3, 8.5, 0.4,
+add_text(sl, "Web Application — 8 Interactive Pages", 0.35, 1.3, 8.5, 0.4,
          font_size=16, bold=True, color=NAVY)
 
 pages = [
     "Home — KPIs, H1-H6 hypothesis strip, top-10 hotspots",
-    "Hotspots — Choropleth map of Cameroon + ranked table",
+    "Hotspots — Full regional stunting ranking table",
+    "What-If Predictor — Client-side inference (no server needed)",
     "Regression — Interactive model leaderboard",
     "Classification — Confusion matrix + per-class F1",
     "Clustering — Cluster profiles + silhouette",
     "Forecasts — Per-region trends + 2026/2028 projections",
     "Hypotheses — H1-H6 cards with test statistics",
-    "Data Explorer — Filterable table (all 50 obs.)",
-    "What-If Predictor — Client-side inference (no server needed)",
-    "Region Drill-down — Full profile per region",
 ]
 add_bullet_block(sl, pages, 0.35, 1.8, 8.3, 5.0, font_size=12)
 

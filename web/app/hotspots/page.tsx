@@ -1,21 +1,16 @@
-import ChoroplethMap from "@/components/ChoroplethMap";
 import { Card } from "@/components/Card";
 import { DataTable } from "@/components/DataTable";
 import { RiskBandBadge } from "@/components/Badge";
 import { DataBanner } from "@/components/DataBanner";
-import { getHotspots, getRegionAgg, getSummary } from "@/lib/data";
+import { getHotspots, getSummary } from "@/lib/data";
 import { num, pct } from "@/lib/format";
 
 export const metadata = { title: "Hotspots — Cameroon Malnutrition Atlas" };
 
 export default async function HotspotsPage() {
-  const [summary, regions, hotspots] = await Promise.all([
-    getSummary(), getRegionAgg(), getHotspots(),
+  const [summary, hotspots] = await Promise.all([
+    getSummary(), getHotspots(),
   ]);
-
-  const regionValues: Record<string, number> = Object.fromEntries(
-    regions.map((r) => [r.region, r.predicted_stunting_mean])
-  );
 
   return (
     <div className="flex flex-col gap-8">
@@ -30,44 +25,39 @@ export default async function HotspotsPage() {
 
       <DataBanner />
 
-      <div className="grid gap-6 lg:grid-cols-[1.05fr_1fr]">
-        <Card title="Regional choropleth" subtitle="Predicted stunting rate per region">
-          <ChoroplethMap values={regionValues} height={440} />
-        </Card>
-
-        <Card
-          title="Full ranking"
-          subtitle="Predicted stunting + WHO risk band + cluster + forecast"
-        >
-          <DataTable
-            rows={hotspots}
-            cols={[
-              { key: "rank", label: "#", align: "right", className: "w-10" },
-              { key: "region", label: "Region" },
-              {
-                key: "predicted_stunting", label: "Predicted", align: "right",
-                render: (r) => <span className="font-medium">{pct(r.predicted_stunting, 1)}</span>,
-              },
-              {
-                key: "predicted_band", label: "Band", align: "center",
-                render: (r) => <RiskBandBadge band={r.predicted_band} />,
-              },
-              {
-                key: "cluster_label", label: "Cluster", className: "text-zinc-500",
-                render: (r) => r.cluster_label ?? "—",
-              },
-              {
-                key: "forecast_2026", label: "→ 2026", align: "right",
-                render: (r) => (r.forecast_2026 != null ? num(r.forecast_2026, 1) : "—"),
-              },
-              {
-                key: "forecast_2028", label: "→ 2028", align: "right",
-                render: (r) => (r.forecast_2028 != null ? num(r.forecast_2028, 1) : "—"),
-              },
-            ]}
-          />
-        </Card>
-      </div>
+      <Card
+        title="Full regional ranking"
+        subtitle="Predicted stunting + WHO risk band + cluster + forecast"
+      >
+        <DataTable
+          rows={hotspots}
+          cols={[
+            { key: "rank", label: "#", align: "right", className: "w-10" },
+            { key: "region", label: "Region", className: "font-medium text-zinc-900" },
+            {
+              key: "predicted_stunting", label: "Predicted", align: "right",
+              render: (r) => <span className="font-semibold text-zinc-900 tabular-nums">{pct(r.predicted_stunting, 1)}</span>,
+            },
+            {
+              key: "predicted_band", label: "WHO Risk Band", align: "center",
+              render: (r) => <RiskBandBadge band={r.predicted_band} />,
+            },
+            {
+              key: "cluster_label", label: "Cluster", className: "text-zinc-500",
+              render: (r) => r.cluster_label ?? "—",
+            },
+            {
+              key: "forecast_2026", label: "→ 2026", align: "right",
+              render: (r) => (r.forecast_2026 != null ? <span className="text-zinc-500 tabular-nums">{num(r.forecast_2026, 1)}%</span> : "—"),
+            },
+            {
+              key: "forecast_2028", label: "→ 2028", align: "right",
+              render: (r) => (r.forecast_2028 != null ? <span className="text-zinc-500 tabular-nums">{num(r.forecast_2028, 1)}%</span> : "—"),
+            },
+          ]}
+        />
+      </Card>
     </div>
   );
 }
+

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const NAV: { href: string; label: string }[] = [
   { href: "/",              label: "Overview" },
   { href: "/hotspots",      label: "Hotspots" },
+  { href: "/predict",       label: "Predictor" },
   { href: "/regression",    label: "Regression" },
   { href: "/classification",label: "Classify" },
   { href: "/clustering",    label: "Cluster" },
