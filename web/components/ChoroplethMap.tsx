@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { geoMercator } from "d3-geo";
 import { scaleSequential } from "d3-scale";
 import { normaliseRegion } from "@/lib/geo";
 import { pct } from "@/lib/format";
@@ -17,6 +18,33 @@ const GEO_URL = "/data/cameroon_admin1.geojson";
 
 const VB_W = 800;
 const VB_H = 720;
+const PAD = 24;
+
+// Cameroon bounding box used by fitExtent to auto-compute scale + translate.
+// Coords: SW corner → NE corner (lng 8.5–16.2, lat 1.66–13.08)
+const CMR_BBOX = {
+  type: "Feature" as const,
+  properties: {},
+  geometry: {
+    type: "Polygon" as const,
+    coordinates: [
+      [
+        [8.5, 1.66], [16.2, 1.66],
+        [16.2, 13.08], [8.5, 13.08],
+        [8.5, 1.66],
+      ],
+    ],
+  },
+};
+
+// react-simple-maps v3 calls projection(width, height, config) when projection
+// is a function. We ignore config and always fit Cameroon to the viewBox.
+function cameroonProjection(width: number, height: number) {
+  return geoMercator().fitExtent(
+    [[PAD, PAD], [width - PAD, height - PAD]],
+    CMR_BBOX as GeoJSON.Feature
+  );
+}
 
 const stops: [number, string][] = [
   [0,    "#15803d"],
@@ -52,13 +80,12 @@ export default function ChoroplethMap({
     return [Math.min(...vals), Math.max(...vals)];
   }, [values, domain]);
 
-  const scale = scaleSequential((t) => interp(t)).domain([vmin, vmax]);
+  const colorScale = scaleSequential((t) => interp(t)).domain([vmin, vmax]);
 
   return (
     <div className="relative w-full" style={{ height }}>
       <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{ center: [12.0, 7.4], scale: 3200 }}
+        projection={cameroonProjection}
         width={VB_W}
         height={VB_H}
         style={{ width: "100%", height: "100%" }}
@@ -70,7 +97,7 @@ export default function ChoroplethMap({
               const region = normaliseRegion(rawName);
               const v = values[region];
               const isHovered = hover?.region === region;
-              const fill = v == null ? "#e5e7eb" : (scale(v) as string);
+              const fill = v == null ? "#e5e7eb" : (colorScale(v) as string);
               return (
                 <Geography
                   key={g.rsmKey}
@@ -103,8 +130,7 @@ export default function ChoroplethMap({
           <div
             className="h-2 w-32 rounded-full ring-1 ring-zinc-200"
             style={{
-              background:
-                "linear-gradient(to right, #15803d, #a3e635, #facc15, #f97316, #7f1d1d)",
+              background: "linear-gradient(to right, #15803d, #a3e635, #facc15, #f97316, #7f1d1d)",
             }}
           />
           <span className="tabular-nums text-zinc-600">{vmax.toFixed(0)}{unitLabel}</span>
