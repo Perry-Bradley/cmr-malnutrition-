@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import { geoMercator } from "d3-geo";
 import { scaleSequential } from "d3-scale";
 import { normaliseRegion } from "@/lib/geo";
 import { pct } from "@/lib/format";
@@ -16,9 +15,6 @@ type Props = {
 
 const GEO_URL = "/data/cameroon_admin1.geojson";
 
-// Internal SVG viewBox. The SVG scales to the container via CSS, so we can
-// reason about projection scale + center against ONE fixed coordinate system
-// instead of fighting the live container size.
 const VB_W = 800;
 const VB_H = 720;
 
@@ -44,40 +40,10 @@ function interp(t: number) {
   return `rgb(${mix(r0, r1)},${mix(g0, g1)},${mix(b0, b1)})`;
 }
 
-// Cameroon's actual bounding box (from the geoBoundaries ADM1 file):
-//   lng 8.50 - 16.19  (7.69° wide)
-//   lat 1.66 - 13.08  (11.42° tall)
-// Height is the limiting dimension for a Mercator projection on this viewBox.
-// Empirical math: to fit 11.42° of latitude into 688 pixels of viewBox height,
-// scale = 688 / (mercatorY(13.08) - mercatorY(1.66)) ≈ 3400.
-// Centred on lng 12.0, visual-centre lat 7.7° (Mercator midpoint, not geom).
-const PROJECTION = geoMercator()
-  .center([12.0, 7.7])
-  .scale(3400)
-  .translate([VB_W / 2, VB_H / 2]);
-
 export default function ChoroplethMap({
   values, unitLabel = "%", domain, height = 480,
 }: Props) {
   const [hover, setHover] = useState<{ region: string; value?: number; x: number; y: number } | null>(null);
-  const [geoLoaded, setGeoLoaded] = useState(false);
-
-  // Once the GeoJSON has loaded, refit the projection to its actual bounding
-  // box so it's pixel-perfect regardless of dataset updates upstream.
-  useEffect(() => {
-    let cancelled = false;
-    fetch(GEO_URL)
-      .then((r) => r.json())
-      .then((j) => {
-        if (cancelled) return;
-        try {
-          PROJECTION.fitExtent([[16, 16], [VB_W - 16, VB_H - 16]], j);
-        } catch { /* keep manual scale fallback */ }
-        setGeoLoaded(true);
-      })
-      .catch(() => { /* keep manual scale fallback */ });
-    return () => { cancelled = true; };
-  }, []);
 
   const [vmin, vmax] = useMemo<[number, number]>(() => {
     if (domain) return domain;
@@ -85,12 +51,14 @@ export default function ChoroplethMap({
     if (!vals.length) return [0, 1];
     return [Math.min(...vals), Math.max(...vals)];
   }, [values, domain]);
+
   const scale = scaleSequential((t) => interp(t)).domain([vmin, vmax]);
 
   return (
     <div className="relative w-full" style={{ height }}>
       <ComposableMap
-        projection={PROJECTION}
+        projection="geoMercator"
+        projectionConfig={{ center: [12.0, 7.4], scale: 3200 }}
         width={VB_W}
         height={VB_H}
         style={{ width: "100%", height: "100%" }}
@@ -105,7 +73,7 @@ export default function ChoroplethMap({
               const fill = v == null ? "#e5e7eb" : (scale(v) as string);
               return (
                 <Geography
-                  key={`${g.rsmKey}-${geoLoaded ? "ready" : "pending"}`}
+                  key={g.rsmKey}
                   geography={g}
                   fill={fill}
                   stroke={isHovered ? "#18181b" : "#ffffff"}
