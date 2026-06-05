@@ -20,31 +20,21 @@ const VB_W = 800;
 const VB_H = 720;
 const PAD = 24;
 
-// Cameroon bounding box used by fitExtent to auto-compute scale + translate.
-// Coords: SW corner → NE corner (lng 8.5–16.2, lat 1.66–13.08)
-const CMR_BBOX = {
-  type: "Feature" as const,
-  properties: {},
-  geometry: {
-    type: "Polygon" as const,
-    coordinates: [
-      [
-        [8.5, 1.66], [16.2, 1.66],
-        [16.2, 13.08], [8.5, 13.08],
-        [8.5, 1.66],
+// Pre-compute projection once using Cameroon's bounding box + the fixed viewBox.
+// fitExtent calculates exactly the right scale and translation — no manual tuning.
+const PROJECTION = geoMercator().fitExtent(
+  [[PAD, PAD], [VB_W - PAD, VB_H - PAD]],
+  {
+    type: "Feature",
+    properties: {},
+    geometry: {
+      type: "Polygon",
+      coordinates: [
+        [[8.5, 1.66], [16.2, 1.66], [16.2, 13.08], [8.5, 13.08], [8.5, 1.66]],
       ],
-    ],
-  },
-};
-
-// react-simple-maps v3 calls projection(width, height, config) when projection
-// is a function. We ignore config and always fit Cameroon to the viewBox.
-function cameroonProjection(width: number, height: number) {
-  return geoMercator().fitExtent(
-    [[PAD, PAD], [width - PAD, height - PAD]],
-    CMR_BBOX as GeoJSON.Feature
-  );
-}
+    },
+  }
+);
 
 const stops: [number, string][] = [
   [0,    "#15803d"],
@@ -85,7 +75,7 @@ export default function ChoroplethMap({
   return (
     <div className="relative w-full" style={{ height }}>
       <ComposableMap
-        projection={cameroonProjection}
+        projection={PROJECTION}
         width={VB_W}
         height={VB_H}
         style={{ width: "100%", height: "100%" }}
