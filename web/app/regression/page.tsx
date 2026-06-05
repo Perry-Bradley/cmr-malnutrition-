@@ -25,8 +25,7 @@ export default async function RegressionPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">Regression</h1>
         <p className="mt-1 text-zinc-600">
-          Predict each sub-region&apos;s stunting rate (continuous %). Ten models compete on
-          5-fold cross-validated RMSE; the winner is used to rank hotspots.
+          Models are compared on 5-fold cross-validated RMSE. The best model is used to rank hotspots.
         </p>
       </header>
 
@@ -70,16 +69,6 @@ export default async function RegressionPage() {
         />
       </Card>
 
-      <Card title="Notes on the methodology">
-        <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-700">
-          <li>Each sub-region/year row is a sample; we don&apos;t do leave-one-year-out CV because the
-            features themselves move year-over-year and a vanilla k-fold reflects the realistic use
-            case (cross-section prediction at a survey year).</li>
-          <li>Linear models are wrapped in <code>StandardScaler</code>; tree models aren&apos;t.</li>
-          <li>The headline result for the project is the H6 hypothesis test (paired t-test on per-fold
-            RMSE) — see the <a className="underline decoration-zinc-300 hover:decoration-zinc-700" href="/hypotheses">Hypotheses</a> page.</li>
-        </ul>
-      </Card>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  ArrowRight, LineChart, MapPinned, ScatterChart, Sparkles, TrendingUp,
+  ArrowRight, LineChart, MapPinned, ScatterChart, TrendingUp,
   Database, Activity, Award,
 } from "lucide-react";
 import ChoroplethMap from "@/components/ChoroplethMap";
@@ -49,23 +49,16 @@ export default async function HomePage() {
               concentrated in the north. This atlas applies four data-mining
               techniques — regression, classification, clustering and forecasting —
               to {summary.n_subregions} real DHS sub-populations across {" "}
-              {summary.survey_years[0]}-{summary.latest_year}, with a live
-              in-browser predictor anyone can play with.
+              {summary.survey_years[0]}–{summary.latest_year}.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/predict"
+                href="/hotspots"
                 className="group inline-flex items-center gap-2 rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow-md shadow-red-600/20 transition-all hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30"
               >
-                <Sparkles className="h-4 w-4" />
-                Try the live predictor
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-              <Link
-                href="/hotspots"
-                className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white/80 px-5 py-2.5 text-sm font-medium text-zinc-700 backdrop-blur transition-colors hover:bg-white hover:border-zinc-400"
-              >
+                <MapPinned className="h-4 w-4" />
                 See the hotspot ranking
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </div>
@@ -129,7 +122,7 @@ export default async function HomePage() {
       <section className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         <Card
           title={`Top ${top10.length} predicted hotspots`}
-          subtitle={`${summary.best_model} prediction · ${summary.latest_year} DHS round · click any region to drill in`}
+          subtitle={`${summary.best_model} prediction · ${summary.latest_year} DHS round`}
           right={
             <Link
               href="/hotspots"
@@ -143,17 +136,7 @@ export default async function HomePage() {
             rows={top10}
             cols={[
               { key: "rank", label: "#", align: "right", className: "w-10 text-zinc-400" },
-              {
-                key: "region", label: "Region",
-                render: (r) => (
-                  <Link
-                    href={`/region/${encodeURIComponent(r.region)}`}
-                    className="font-medium text-zinc-900 hover:text-red-700 hover:underline underline-offset-2"
-                  >
-                    {r.region}
-                  </Link>
-                ),
-              },
+              { key: "region", label: "Region" },
               {
                 key: "predicted_stunting", label: "Predicted", align: "right",
                 render: (r) => <span className="font-semibold tabular-nums">{pct(r.predicted_stunting, 1)}</span>,
@@ -172,10 +155,9 @@ export default async function HomePage() {
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
           {[
-            { icon: Sparkles,     href: "/predict",        title: "Predict",        body: "Live in-browser sliders.", tone: "from-red-50 to-rose-50 border-red-200/60 text-red-700" },
-            { icon: ScatterChart, href: "/regression",     title: "Regression",     body: "10 models, 5-fold CV.",      tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
+            { icon: ScatterChart, href: "/regression",     title: "Regression",     body: "9 models, 5-fold CV RMSE.",   tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
             { icon: MapPinned,    href: "/classification", title: "Classification", body: "WHO 4-band risk classifier.", tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
-            { icon: LineChart,    href: "/clustering",     title: "Clustering",     body: "K-Means on driver profile.",  tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
+            { icon: LineChart,    href: "/clustering",     title: "Clustering",     body: "K-Means on driver profiles.", tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
             { icon: TrendingUp,   href: "/forecasts",      title: "Forecasts",      body: "Trends to 2026 / 2028.",      tone: "from-zinc-50 to-white border-zinc-200/60 text-zinc-700" },
           ].map(({ icon: Icon, href, title, body, tone }) => (
             <Link

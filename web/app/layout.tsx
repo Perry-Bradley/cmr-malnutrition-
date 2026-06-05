@@ -12,17 +12,14 @@ export const metadata: Metadata = {
     "Predicting child stunting hotspots in Cameroon using machine learning on sub-regional health and socio-economic data. CEC 420 Data Mining project.",
 };
 
-const NAV = [
+const NAV: { href: string; label: string }[] = [
   { href: "/",              label: "Overview" },
-  { href: "/predict",       label: "Predict", highlight: true },
   { href: "/hotspots",      label: "Hotspots" },
   { href: "/regression",    label: "Regression" },
   { href: "/classification",label: "Classify" },
   { href: "/clustering",    label: "Cluster" },
   { href: "/forecasts",     label: "Forecasts" },
   { href: "/hypotheses",    label: "H1–H6" },
-  { href: "/data",          label: "Data" },
-  { href: "/about",         label: "About" },
 ];
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -48,11 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={
-                    item.highlight
-                      ? "ml-1 inline-flex items-center gap-1 rounded-md bg-red-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-red-700"
-                      : "rounded-md px-2.5 py-1.5 text-sm text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
-                  }
+                  className="rounded-md px-2.5 py-1.5 text-sm text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
                 >
                   {item.label}
                 </Link>
@@ -64,11 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link
                 key={item.href}
                 href={item.href}
-                className={
-                  item.highlight
-                    ? "shrink-0 rounded-md bg-red-600 px-2.5 py-1 text-xs font-medium text-white"
-                    : "shrink-0 rounded-md px-2.5 py-1 text-xs text-zinc-600 hover:bg-zinc-100"
-                }
+                className="shrink-0 rounded-md px-2.5 py-1 text-xs text-zinc-600 hover:bg-zinc-100"
               >
                 {item.label}
               </Link>

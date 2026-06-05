@@ -6,19 +6,13 @@ import { CheckCircle2, XCircle } from "lucide-react";
 
 export const metadata = { title: "Hypotheses — Cameroon Malnutrition Atlas" };
 
-const STATEMENTS: Record<string, { stmt: string; sign: string; method: string }> = {
-  H1: { stmt: "Maternal education (% women with secondary+ schooling) is negatively associated with stunting.",
-         sign: "negative", method: "Spearman ρ on women_secondary_plus_pct" },
-  H2: { stmt: "Improved water + sanitation are negatively associated with stunting.",
-         sign: "negative", method: "Spearman ρ on WASH composite (mean of water + sanitation)" },
-  H3: { stmt: "Socio-economic status (proxy: women literate + secondary+) is negatively associated with stunting.",
-         sign: "negative", method: "Spearman ρ on a literacy/secondary-edu composite (the HDX subnational extract does not include DHS wealth quintiles for Cameroon, so we use the documented education proxy)" },
-  H4: { stmt: "Healthcare access (proxy: health-facility delivery share) is negatively associated with stunting.",
-         sign: "negative", method: "Spearman ρ on health_facility_delivery_pct (DHS does not publish per-region facility counts; this is the standard access proxy)" },
-  H5: { stmt: "Malaria prevalence is positively associated with stunting.",
-         sign: "positive", method: "Spearman ρ on malaria_prevalence_pct (RDT)" },
-  H6: { stmt: "The ML regression model beats the mean-baseline on cross-validated RMSE.",
-         sign: "lower",    method: "One-sided paired t-test on per-fold RMSE differences" },
+const STATEMENTS: Record<string, { stmt: string; sign: string }> = {
+  H1: { stmt: "Maternal education is negatively associated with stunting.",           sign: "negative" },
+  H2: { stmt: "Improved water and sanitation access is negatively associated with stunting.", sign: "negative" },
+  H3: { stmt: "Socio-economic status is negatively associated with stunting.",        sign: "negative" },
+  H4: { stmt: "Healthcare facility access is negatively associated with stunting.",   sign: "negative" },
+  H5: { stmt: "Malaria prevalence is positively associated with stunting.",           sign: "positive" },
+  H6: { stmt: "The ML model beats the naive mean-baseline on cross-validated RMSE.",  sign: "lower"    },
 };
 
 export default async function HypothesesPage() {
@@ -67,30 +61,18 @@ export default async function HypothesesPage() {
               <dl className="grid gap-x-6 gap-y-2 text-sm sm:grid-cols-[160px_1fr]">
                 <dt className="text-zinc-500">Predicted direction</dt>
                 <dd className="font-medium text-zinc-800">{meta.sign}</dd>
-                <dt className="text-zinc-500">Method</dt>
-                <dd className="text-zinc-800">{meta.method}</dd>
-                {r.feature && (
-                  <>
-                    <dt className="text-zinc-500">Feature</dt>
-                    <dd className="font-mono text-xs text-zinc-700">{r.feature}</dd>
-                  </>
-                )}
                 {r.rho != null && (
                   <>
-                    <dt className="text-zinc-500">Spearman rho</dt>
+                    <dt className="text-zinc-500">Spearman ρ</dt>
                     <dd className="tabular-nums text-zinc-800">{num(r.rho, 3)}</dd>
                   </>
                 )}
                 <dt className="text-zinc-500">p-value</dt>
                 <dd className="tabular-nums text-zinc-800">{pval(r.p_value)}</dd>
-                {r.ml_rmse_mean != null && (
+                {r.improvement_pct != null && (
                   <>
-                    <dt className="text-zinc-500">ML CV RMSE</dt>
-                    <dd className="tabular-nums text-zinc-800">{num(r.ml_rmse_mean, 3)}</dd>
-                    <dt className="text-zinc-500">Baseline CV RMSE</dt>
-                    <dd className="tabular-nums text-zinc-800">{num(r.baseline_rmse_mean ?? 0, 3)}</dd>
-                    <dt className="text-zinc-500">Improvement</dt>
-                    <dd className="text-emerald-700 font-medium">{num(r.improvement_pct ?? 0, 1)}%</dd>
+                    <dt className="text-zinc-500">Improvement over baseline</dt>
+                    <dd className="text-emerald-700 font-medium">{num(r.improvement_pct, 1)}%</dd>
                   </>
                 )}
               </dl>

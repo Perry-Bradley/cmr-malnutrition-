@@ -37,10 +37,7 @@ export default async function ClassificationPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">Classification</h1>
         <p className="mt-1 text-zinc-600">
-          Same features, different framing: bin the stunting rate into the four WHO
-          public-health categories and train a classifier. Useful when programmes need
-          a categorical decision (e.g. trigger an emergency response only on
-          &ldquo;critical&rdquo;).
+          Stunting rate is binned into four WHO risk bands and a multi-class classifier is trained on the same features.
         </p>
       </header>
 
@@ -74,40 +71,6 @@ export default async function ClassificationPage() {
         </Card>
       </div>
 
-      <Card title="Per-class metrics (best model)">
-        <DataTable
-          rows={bestReport.labels.map((label) => {
-            const r = bestReport.classification_report[label] as Record<string, number>;
-            return {
-              label,
-              precision: r?.precision ?? 0,
-              recall: r?.recall ?? 0,
-              f1: r?.["f1-score"] ?? 0,
-              support: r?.support ?? 0,
-            };
-          })}
-          cols={[
-            { key: "label",     label: "Band", render: (r) => <RiskBandBadge band={r.label as string} /> },
-            { key: "precision", label: "Precision", align: "right", render: (r) => num(r.precision as number, 3) },
-            { key: "recall",    label: "Recall",    align: "right", render: (r) => num(r.recall as number, 3) },
-            { key: "f1",        label: "F1",        align: "right", render: (r) => num(r.f1 as number, 3) },
-            { key: "support",   label: "Support",   align: "right" },
-          ]}
-        />
-      </Card>
-
-      <Card title="Classifier leaderboard">
-        <DataTable
-          rows={sorted}
-          cols={[
-            { key: "name", label: "Model" },
-            { key: "accuracy",         label: "Test accuracy", align: "right", render: (r) => `${((r.accuracy as number) * 100).toFixed(1)}%` },
-            { key: "macro_f1",         label: "Macro F1",      align: "right", render: (r) => num(r.macro_f1 as number, 3) },
-            { key: "cv_accuracy_mean", label: "CV accuracy",   align: "right", render: (r) => `${((r.cv_accuracy_mean as number) * 100).toFixed(1)}%` },
-            { key: "cv_accuracy_std",  label: "CV std",        align: "right", render: (r) => `${((r.cv_accuracy_std as number) * 100).toFixed(2)} pp` },
-          ]}
-        />
-      </Card>
     </div>
   );
 }

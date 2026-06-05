@@ -18,29 +18,12 @@ export default async function ForecastsPage() {
   const mean2026 = fc2026.reduce((s, f) => s + f.forecast_stunting, 0) / Math.max(1, fc2026.length);
   const mean2028 = fc2028.reduce((s, f) => s + f.forecast_stunting, 0) / Math.max(1, fc2028.length);
 
-  // join trend + forecasts into one row per sub-region
-  const forecastsBySub: Record<string, { f2026?: number; f2028?: number }> = {};
-  for (const f of forecasts) {
-    const k = `${f.region}|${f.subregion}`;
-    forecastsBySub[k] = forecastsBySub[k] ?? {};
-    if (f.year === 2026) forecastsBySub[k].f2026 = f.forecast_stunting;
-    if (f.year === 2028) forecastsBySub[k].f2028 = f.forecast_stunting;
-  }
-  const merged = trends.map((t) => ({
-    ...t,
-    forecast_2026: forecastsBySub[`${t.region}|${t.subregion}`]?.f2026,
-    forecast_2028: forecastsBySub[`${t.region}|${t.subregion}`]?.f2028,
-  }));
-
   return (
     <div className="flex flex-col gap-8">
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">Forecasts</h1>
         <p className="mt-1 text-zinc-600">
-          A linear trend is fitted to each sub-region&apos;s observed stunting series and
-          extrapolated to 2026 and 2028. Slope (in percentage points per year) is the
-          most informative single number — negative means improving, positive means
-          stagnating or worsening.
+          Linear trends fitted per sub-region, extrapolated to 2026 and 2028. Negative slope = improving.
         </p>
       </header>
 
@@ -80,27 +63,6 @@ export default async function ForecastsPage() {
         </Card>
       </div>
 
-      <Card title="All sub-regions: trend + forecast"
-            subtitle="Sorted by predicted 2028 stunting rate (highest risk first)">
-        <DataTable
-          rows={[...merged].sort((a, b) => (b.forecast_2028 ?? 0) - (a.forecast_2028 ?? 0))}
-          cols={[
-            { key: "subregion",       label: "Sub-region" },
-            { key: "region",          label: "Region", className: "text-zinc-500" },
-            { key: "last_observed",   label: `Last obs (${trends[0]?.last_year ?? ""})`, align: "right",
-              render: (r) => pct(r.last_observed, 1) },
-            { key: "slope_pp_per_year", label: "Slope (pp/yr)", align: "right",
-              render: (r) => (
-                <span className={r.slope_pp_per_year < 0 ? "text-emerald-700" : "text-red-700"}>
-                  {num(r.slope_pp_per_year, 2)}
-                </span>
-              ) },
-            { key: "r2",              label: "Trend R²", align: "right", render: (r) => num(r.r2, 2) },
-            { key: "forecast_2026",   label: "2026", align: "right", render: (r) => r.forecast_2026 != null ? pct(r.forecast_2026, 1) : "—" },
-            { key: "forecast_2028",   label: "2028", align: "right", render: (r) => r.forecast_2028 != null ? pct(r.forecast_2028, 1) : "—" },
-          ]}
-        />
-      </Card>
     </div>
   );
 }

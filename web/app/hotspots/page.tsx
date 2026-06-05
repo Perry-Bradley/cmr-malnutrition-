@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ChoroplethMap from "@/components/ChoroplethMap";
 import { Card } from "@/components/Card";
 import { DataTable } from "@/components/DataTable";
@@ -25,8 +24,7 @@ export default async function HotspotsPage() {
           Predicted child-malnutrition hotspots
         </h1>
         <p className="mt-1 text-zinc-600">
-          Every Cameroon admin-1 region in {summary.latest_year}, ranked by the
-          {" "}{summary.best_model} prediction. Click a region to drill in.
+          Every Cameroon admin-1 region in {summary.latest_year}, ranked by predicted stunting rate.
         </p>
       </header>
 
@@ -45,17 +43,7 @@ export default async function HotspotsPage() {
             rows={hotspots}
             cols={[
               { key: "rank", label: "#", align: "right", className: "w-10" },
-              {
-                key: "region", label: "Region",
-                render: (r) => (
-                  <Link
-                    href={`/region/${encodeURIComponent(r.region)}`}
-                    className="font-medium text-zinc-900 hover:underline"
-                  >
-                    {r.region}
-                  </Link>
-                ),
-              },
+              { key: "region", label: "Region" },
               {
                 key: "predicted_stunting", label: "Predicted", align: "right",
                 render: (r) => <span className="font-medium">{pct(r.predicted_stunting, 1)}</span>,
